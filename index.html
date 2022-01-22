@@ -1,0 +1,186 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Gazetteer</title>
+	<meta name="description" content="Poject1">
+	<meta name="author" content="Raf">
+	<link rel="icon" type="image/x-icon" href="img/favicon.ico">
+	<link rel="stylesheet" href="libs/leaflet/leaflet.css" type='text/css' />
+	<link rel="stylesheet" href="libs/markercluster/dist/MarkerCluster.css" type="text/css" />
+	<link rel="stylesheet" href="libs/markercluster/dist/MarkerCluster.Default.css" type="text/css" />
+	<link rel="stylesheet" href="libs/dist/css/leaflet.extra-markers.min.css">
+	<link rel="stylesheet" href="libs/easybutton/easy-button.css">	
+	<link rel="stylesheet" href="libs/css/mystyle.css?v=7">	
+</head>
+
+<body >
+	<div id=”preloader”></div>
+	<div id="container">
+		<div id="selc">
+			<form id="myForm">
+				<label for="selectNumber">Choose a country</label>
+				<br>
+				<select id="selectNumber">
+					<option>Choose a country</option>
+				</select>
+			</form>
+		</div>
+		<div class='custom-popup' id="map">
+		</div>
+	</div>
+
+
+
+	<!-- The Modal -->
+	<div id="myModal" class="modal">
+
+		<!-- Modal content -->
+		<div class="modal-content">
+			<span class="close" onclick="closeModals()">&times;</span>
+			<div id="divResults">
+
+				<table>
+					<caption id="countryName"></caption>
+					<tr>
+						<td align="right">
+							Continent:
+						</td>
+						<td id="txtContinent">
+
+						</td>
+
+					</tr>
+
+					<tr>
+						<td align="right">
+							Capital:
+						</td>
+						<td id="txtCapital">
+						</td>
+					</tr>
+
+					<tr>
+						<td align="right">
+							Languages:
+						</td>
+						<td id="txtLanguages">
+						</td>
+					</tr>
+
+					<tr>
+						<td align="right">
+							Population:
+						</td>
+						<td id="txtPopulation">
+						</td>
+					</tr>
+					<tr>
+						<td align="right">
+							Area (km<sup>2</sup>):
+						</td>
+						<td id="txtArea">
+						</td>
+					</tr>
+
+					<tr>
+						<td align="right">
+							Currency:
+						</td>
+						<td id="currency">
+						</td>
+					</tr>
+				</table>
+
+			</div>
+			<div id="modalpic"><img id="modalimg" src="" alt=""></div>
+		</div>
+
+	</div>
+
+	<!-- The Modal -->
+	<div id="WeatherModal" class="modal">
+		<!-- Modal content -->
+		<div class="modal-content-flag">
+			<div><span class="close" onclick="closeModals()">&times;</span></div>
+			<div id="capital" class="pad_and_center"></div>
+			<div id="weathermodalpic" class="pad_and_center">
+				<img id="weatherpic" src="" alt="">
+			</div>	
+			<div id="desc" class="pad_and_center"></div>		
+			<div id="feels" class="pad_and_center"></div>
+			<div id="temp" class="pad_and_center"></div>
+		</div>
+	</div>
+
+	<div id="covidModal" class="modal">
+		<!-- Modal content -->
+		<div class="modal-content-flag">
+			<div><span class="close" onclick="closeModals()">&times;</span></div>
+			<div>
+				<div id="covidCountry" class="pad_and_center"></div>
+				<div id="covidconfirmed" class="pad_and_center"></div>	
+				<div id="covidcritical" class="pad_and_center"></div>		
+				<div id="coviddeaths" class="pad_and_center"></div>
+				<div id="covidrecovered" class="pad_and_center"></div>
+			</div>
+		</div>
+	</div>
+
+	<div id="flagModal" class="modal">
+		<!-- Modal content -->
+		<div class="modal-content-flag">
+			<div><span class="close" onclick="closeModals()">&times;</span></div>
+			<div id="country" class="pad_and_center"></div>
+
+			<div id="flagdiv" class="pad_and_center">
+				<img id="flagpic" src="" alt="">
+			</div>	
+		</div>
+	</div>
+
+	<div id="holyModal" class="modal">
+		<!-- Modal content -->
+		<div class="modal-content-s">
+			<div><span class="close" onclick="closeModals()">&times;</span></div>
+			<div id="holyModalContent">
+				
+			</div>
+		</div>
+	</div>
+
+	<div id="timeModal" class="modal">
+		<!-- Modal content -->
+		<div class="modal-content-flag">
+			<div ><span class="close" onclick="closeModals()">&times;</span></div>
+			<div id="timeModalContent">
+				
+			</div>
+		</div>
+	</div>
+
+	<div id="newsModal" class="modal">
+		<!-- Modal content -->
+		<div class="modal-content">
+			<div ><span class="close" onclick="closeModals()">&times;</span></div>
+			<div id="newsModalContent">
+				
+			</div>
+		</div>
+	</div>
+
+	
+	<script type="application/javascript" src="libs/js/jquery-2.2.3.min.js"></script>
+	<script type="application/javascript" src="libs/leaflet/leaflet.js"></script>
+	<script type="application/javascript" src="libs/fontawesome/js/all.js"></script>
+	<script type="application/javascript" src="libs/markercluster/dist/leaflet.markercluster.js"></script>
+	<script type="application/javascript" src="libs/easybutton/easy-button.js"></script>
+	<script type="application/javascript" src="libs/dist/js/leaflet.extra-markers.min.js"></script>
+	<script type="application/javascript" src="libs/js/script.js?v=8"></script>
+
+</body>
+
+</html>
